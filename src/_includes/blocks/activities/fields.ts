@@ -22,6 +22,28 @@ export default {
           upload: "uploads:logos",
         },
         "description: text",
+        {
+          type: "checkbox",
+          name: "wide",
+          label: "Double width",
+          description:
+            "Span two columns to give it more importance (single column on small screens)",
+        },
+        {
+          type: "select",
+          name: "style",
+          label: "Style",
+          description: "Alternative style to make it stand out",
+          value: "",
+          options: [
+            { label: "Default", value: "" },
+            { label: "Solid shadow", value: "is-shadow" },
+            { label: "Primary color", value: "is-primary" },
+            { label: "Secondary color", value: "is-secondary" },
+            { label: "Dark", value: "is-dark" },
+            { label: "Light", value: "is-light" },
+          ],
+        },
       ],
     },
   ],

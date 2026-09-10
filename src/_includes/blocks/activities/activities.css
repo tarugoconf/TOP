@@ -15,6 +15,45 @@
     overflow: hidden;
     container-type: inline-size;
 
+    /* Double width: span all columns (no effect on single-column layouts) */
+    &.is-wide {
+      grid-column: 1 / -1;
+    }
+
+    /* Alternative styles */
+    &.is-shadow {
+      box-shadow: -8px 8px 0 var(--color-secondary);
+    }
+    &.is-primary {
+      background: var(--color-primary);
+      color: white;
+      --color-links: var(--color-light);
+    }
+    &.is-secondary {
+      background: var(--color-secondary);
+      color: var(--color-dark);
+      --color-links: var(--color-dark);
+    }
+    &.is-dark {
+      background: var(--color-dark);
+      color: var(--color-light);
+      --color-links: var(--color-primary);
+    }
+    &.is-light {
+      background: var(--color-light);
+      color: var(--color-dark);
+      --color-links: var(--color-dark);
+    }
+    &.is-primary .badge {
+      --bg: var(--color-secondary);
+      --color: var(--color-dark);
+    }
+    &.is-secondary .badge,
+    &.is-dark .badge {
+      --bg: var(--color-light);
+      --color: var(--color-dark);
+    }
+
     > div {
       display: flex;
       flex-direction: column;
@@ -44,6 +83,9 @@
     @container (min-width: 450px) {
       height: 100%;
       width: 200px;
+    }
+    @container (min-width: 700px) {
+      width: 300px;
     }
   }
 

@@ -11,7 +11,7 @@
 
   <ul class="block-activities-list is-{{ block.size }}">
     {{ for activity of block.items }}
-      <li>
+      <li class="activity {{ activity.wide ? 'is-wide' : '' }} {{ activity.style }}">
         <div>
           <img src="{{ activity.img }}" alt="" class="activity-image">
 
