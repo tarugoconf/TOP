@@ -18,10 +18,15 @@
     /* Double width: span all columns (no effect on single-column layouts) */
     &.is-wide {
       grid-column: 1 / -1;
-      margin-bottom: 1rem;
+    }
+    /* Only when the item really spans several columns */
+    @container (min-width: 830px) {
+      &.is-wide {
+        margin-bottom: 1rem;
 
-      .activity-content {
-        padding: 1.5rem;
+        .activity-content {
+          padding: 1.5rem;
+        }
       }
     }
 
